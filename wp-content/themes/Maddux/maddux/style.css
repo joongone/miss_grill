@@ -182,6 +182,8 @@ Last change:	February 24, 2015
 /* ===============================================
     1. Reset
 === */
+@import url(//cdn.jsdelivr.net/font-nanum/1.0/nanumgothic/nanumgothic.css);
+
 html * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -653,6 +655,14 @@ h1, h2, h3, h4, h5, h6 { color: #444; }
 
 /* 5c. alternate logo */
 #logo a { color: #212121; }
+#logo a{
+    display: block;
+    width:155px;
+    height:47px;
+    background: url(images/logo.gif) no-repeat 0 0;
+    text-indent:-9999px;
+    margin:0 auto;
+}
 
 /* 5d. title bar heading color */
 #title-bar h1,
@@ -939,7 +949,7 @@ hr,
 abbr,
 acronym { border-bottom: 1px dotted #999; border-top: none; }
 
-.ts-top { border-bottom: 1px solid #eee; }
+.ts-top { /*border-bottom: 1px solid #eee;*/ }
 #header-social .social .icon-style,
 .social-icons-widget-style .social .icon-style { border: 1px solid #eee; }
 #bottom-ad-inner,
@@ -950,7 +960,7 @@ body.has-no-footer-widgets #copyright-nav { border-top: 1px solid #eee; }
 #copyright-nav ul li { border-left: 1px solid #eee; }
 .mobile-nav { border: 1px solid #eee; }
 .mobile-menu-sep { border-left: 1px solid #eee; }
-.top-default .main-nav { border-top: 1px solid #eee; }
+/*.top-default .main-nav { border-top: 1px solid #eee; }*/
 
 @media only screen and (max-width: 900px) {
     .main-nav { border: 1px solid #eee;}
@@ -1187,7 +1197,7 @@ body.not-wall-to-wall #wrap,
 #main.has-sidebar-content-left,
 #main.has-sidebar-content-right,
 #main.has-sidebar-comments-left,
-#main.has-sidebar-comments-right { max-width: 1040px; margin: 0 auto; }
+#main.has-sidebar-comments-right { max-width: 1100px; margin: 0 auto; }
 #main .post,
 #main.fullwidth,
 #main.no-sidebar,
@@ -1349,7 +1359,7 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
     height: 12px;
 }
 .top-simple .main-nav { padding-top: 20px; }
-.top-default .main-nav { padding-top: 10px; }
+/*.top-default .main-nav { padding-top: 10px; }*/
 .main-nav {
     position: relative;
     top: 1px;
@@ -1412,6 +1422,13 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
     height: 0;
     border-style: solid;
     border-width: 3px 3px 0 3px;
+}
+.main-nav span{
+    font-family: "나눔고딕", "nanumgothic";
+    color:#292929;
+    font-weight: 500;
+    font-size:15px;
+    letter-spacing: 0.02em;
 }
 .main-nav > ul > li > a span, 
 .main-nav > div > ul > li > a span { display: inline-block; }
@@ -1571,6 +1588,7 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
 #title-bar ul.post-categories li { display: inline; margin-right: 5px; }
 #title-bar ul.post-categories li a { font-size: 11px; text-transform: uppercase; padding: .3em .6em; }
 
+.home #title-bar-wrap .breadcrumbs { display: none; }
 
 /* ==================================================
     11. Sliders
@@ -1787,7 +1805,7 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
 .mimic-post ul, 
 .mimic-post ol { margin-left: 1.8em; }
 #main-container-wrap { overflow: hidden; }
-#main-container-wrap.no-top-padding { padding-top: 0px; top: -1px; }
+#main-container-wrap.no-top-padding { padding-top: 0px; top: -2px; }
 #main-container-wrap.top-minus-one { position: relative; top: -1px; }
 #main-container-wrap.no-bottom-padding { padding-bottom: 0px; }
 #main-container-wrap { padding: 30px 0 50px 0; position: relative; }
@@ -2964,7 +2982,7 @@ img.alignleft {	padding: 4px; margin: 0 7px 2px 0; display: inline;	}
 #footer .widget > h3,
 #footer .widget .page-title h3,
 #footer .woocommerce.widget .heading h3 { margin-bottom: 15px; }
-
+#footer .page-title{display: none;}
 /* 20d. footer lists */
 #footer .widget li:first-child { border: none; padding-top: 0px; }
 #footer .tabs-widget li:first-child { padding-top: 11px; }
@@ -4013,8 +4031,8 @@ body.woocommerce-plus-minus-buttons.woocommerce .quantity input[type="number"] {
     #copyright-nav-wrap,
     #title-bar-wrap { padding-left: 20px; padding-right: 20px; }
 }
-/* 29b. min-width 960px */
-@media only screen and (min-width: 960px) {
+/* 29b. min-width 960px desktop sujin*/
+@media only screen and (min-width: 960px) { 
     body.ts-main-nav-centered .main-nav > ul,
     body.ts-main-nav-centered .main-nav > div > ul { text-align: center; }
     body.ts-main-nav-centered .main-nav .main-nav-shop-link { float: none !important; }
@@ -4031,6 +4049,53 @@ body.woocommerce-plus-minus-buttons.woocommerce .quantity input[type="number"] {
     .ts-fade-in-from-right { right: -100px; }
     .ts-fade-in-from-top { top: -100px; }
     .ts-fade-in-from-bottom { bottom: -100px; }
+    .top-default{
+        height:93px;
+        background: url(images/header_bg.png) repeat-x 0 0;
+    }
+    #logo a{
+        position: absolute;
+        top:10px;
+    }
+    .main-nav{
+        float:right;
+        padding-top:32px;
+    }
+    #top #logo-nav{
+        display:inline-block;
+        width:auto;
+        padding:0;
+    }
+    .ts-top{
+        height:90px;
+    }
+    .ts-top:after, .footer_inner:after{
+        content: "";
+        display: block;
+        clear:both;
+    }
+    .footer_inner{
+        
+    }
+    .footer_inner .column{
+        float:left;
+    }
+    .footer_inner .column.logo{
+        width:28%;
+    }
+    .footer_inner .column.menu{
+        width:55%;
+    }
+    .footer_inner .menu li{
+        float:left;
+        width:30%;
+    }
+    .footer_inner .menu li:first-child{
+        width:40%;
+    }
+    .footer_inner .column.follow{
+        width:17%;
+    }
 }
 /* 29c. max-width 959px */
 @media only screen and (max-width: 959px) {
@@ -4305,7 +4370,7 @@ body.woocommerce-plus-minus-buttons.woocommerce .quantity input[type="number"] {
     #main-slider-wrap .flexslider,
     #main-slider-wrap .flexslider li { max-height: 240px; }
     
-    #top #logo-nav { display: block; }
+    #top #logo-nav { /*display: block;*/ }
     #top #logo-nav #social-search { display: block; text-align: inherit; }
     #social-search.top-header-widget-area { display: none; }
     .top-default #social-search .ts-searchform { margin-left: 0; }
