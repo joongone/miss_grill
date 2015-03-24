@@ -182,8 +182,7 @@ Last change:	February 24, 2015
 /* ===============================================
     1. Reset
 === */
-@import url(//cdn.jsdelivr.net/font-nanum/1.0/nanumgothic/nanumgothic.css);
-
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 html * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -377,7 +376,7 @@ a.featured-photo-link img,
 === */
 
 /* 3a. font-family */
-body, h1, h2, h3, h4 { font-family: "Droid Serif", Georgia, serif; }
+body, h1, h2, h3, h4 { font-family: '나눔고딕', 'nanum gothic', "Droid Serif", Georgia, serif; }
 h5, 
 h6,
 small,
@@ -413,7 +412,7 @@ ol.commentlist .comment-head,
 .woocommerce input[type="button"], 
 .woocommerce .product-remove a.remove,
 .woocommerce-page .select2-drop-active,
-.woocommerce .select2-container .select2-choice { font-family: "Open Sans", Arial, sans-serif; }
+.woocommerce .select2-container .select2-choice { font-family:  '나눔고딕', 'nanum gothic', "Open Sans", Arial, sans-serif; }
 
 /* 3b. font-size */
 body,
@@ -1070,8 +1069,6 @@ body.single-post #ts-post-the-content [class*="wp-review"] .review-title { margi
 #footer-wrap { border-top: 1px solid #eee; border-bottom: 1px solid #eee; }
 
 
-
-
 /* ==================================================
     7. Form Element Colors
     
@@ -1389,11 +1386,21 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
 .top-default .main-nav > div > ul > li { padding-bottom: 10px; }
 .main-nav > ul > li, 
 .main-nav > div > ul > li { 
-    margin: 0 0 0 30px; 
+    padding: 0 0 0 25px; 
+}
+.main-nav > ul > li:before{
+    content: "";
+    margin-right:25px;
+    border-left:1px dotted #b1b1b1;
 }
 .main-nav > ul > li:first-child, 
 .main-nav > div > ul > li:first-child {
     margin-left: 0px;
+}
+.main-nav > ul > li:first-child::before{
+    content: "";
+    margin-right:0;
+    border:0;
 }
 .main-nav li.dt-only {}
 .main-nav li.mb-only { display: none; }
@@ -1808,7 +1815,7 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
 #main-container-wrap.no-top-padding { padding-top: 0px; top: -2px; }
 #main-container-wrap.top-minus-one { position: relative; top: -1px; }
 #main-container-wrap.no-bottom-padding { padding-bottom: 0px; }
-#main-container-wrap { padding: 30px 0 50px 0; position: relative; }
+#main-container-wrap { /*padding: 30px 0 50px 0;*/ position: relative; }
 #main-container { position: relative; }
 body.single-post #main-container { padding-top: 0px; }
 body.single-post #sidebar { padding-top: 35px; }
@@ -2976,7 +2983,7 @@ img.alignleft {	padding: 4px; margin: 0 7px 2px 0; display: inline;	}
 #bottom-ad-inner { padding: 30px 0; }
 
 /* 20b. footer layout */
-#footer { padding: 50px 0 70px 0; }
+#footer { padding: 37px 0 37px 0; }
 
 /* 20c. footer widget titles */
 #footer .widget > h3,
@@ -2984,7 +2991,7 @@ img.alignleft {	padding: 4px; margin: 0 7px 2px 0; display: inline;	}
 #footer .woocommerce.widget .heading h3 { margin-bottom: 15px; }
 #footer .page-title{display: none;}
 /* 20d. footer lists */
-#footer .widget li:first-child { border: none; padding-top: 0px; }
+#footer .widget li:first-child { border: none; /*padding-top: 0px;*/ }
 #footer .tabs-widget li:first-child { padding-top: 11px; }
 
 /* 20e. footer testimonials */
@@ -3003,6 +3010,20 @@ img.alignleft {	padding: 4px; margin: 0 7px 2px 0; display: inline;	}
 #footer .widget { margin-bottom: 30px; }
 #footer [class*="span"] .widget:last-child { margin-bottom: 0px; }
 
+#footer .footer_title{display:block; padding-bottom:5px; color:#fff; font-family: 'open sans'; font-weight: normal; font-size: 16px; letter-spacing: 1px;}
+#footer .menu li{font-size:12px;}
+#footer .menu em{display: block; margin-bottom:10px; font-style: normal; font-weight: 500; color:#fff; font-size:14px;}
+#footer .menu a{display: block; margin-top:10px; color:#cdcdcd; font-size:16px; font-family: 'PTsans';}
+.footer_inner .menu{margin-top:30px;}
+.footer_inner .follow{margin-top:20px;}
+
+#footer .instagram::before, 
+#footer .facebook::before{content: ""; display: inline-block; margin-right:14px; width: 40px; height: 40px; background-repeat: no-repeat; vertical-align: middle;}
+#footer .instagram::before{background-image: url(images/sns_icon.gif); background-position: 0 0;}
+#footer .facebook::before{background-image: url(images/sns_icon.gif); background-position: 0 -50px;}
+#footer .instagram, #footer .facebook{display: block; margin-top:11px; font-family: 'open sans'; font-size: 12px;}
+
+#footer {text-align: center;}
 
 /* 20g. copyright / bottom nav */
 #copyright-nav { padding: 30px 0; }
@@ -4075,7 +4096,7 @@ body.woocommerce-plus-minus-buttons.woocommerce .quantity input[type="number"] {
         clear:both;
     }
     .footer_inner{
-        
+        text-align: left;
     }
     .footer_inner .column{
         float:left;
@@ -4095,6 +4116,14 @@ body.woocommerce-plus-minus-buttons.woocommerce .quantity input[type="number"] {
     }
     .footer_inner .column.follow{
         width:17%;
+        padding-left:60px;
+        border-left: 1px dotted #8d9388;
+    }
+    .footer_inner .menu{
+        margin-top:0;
+    }
+    .footer_inner .follow{
+        margin-top:0;
     }
 }
 /* 29c. max-width 959px */
