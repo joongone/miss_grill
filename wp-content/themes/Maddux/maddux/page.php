@@ -66,13 +66,13 @@ endif;
                                                 /* Bottom Image */
                                                 $bottom_image_files = get_bottom_image_fullsize_file_lists($page_id);
                                                 if(count($bottom_image_files)>0){
-                                                    echo "<div>";
+                                                    echo "<div class='main-menu-category'>";
                                                     for($i=0; $i<count($bottom_image_files); $i++){
 
                                                         if($bottom_image_files[$i] != null){
-                                                            echo '<div>';
+                                                            //echo '<div class="abc">';
                                                             echo "<img src='".$bottom_image_files[$i]."'/>";
-                                                            echo '<div>';  
+                                                            //echo '<div>';  
                                                         }
                                                     }  
                                                     echo "</div>";

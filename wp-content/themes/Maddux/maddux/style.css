@@ -76,6 +76,7 @@ Last change:	February 24, 2015
     - 12e. single post featured media
     - 12f. thumb gallery
     - 12g. single page/post common
+    - 12h. main menu category - custom
 13. The Loop (Blog Loop / Blog Shortcode / etc)
     - 13a. general/common
     - 13b. loop > widget
@@ -970,7 +971,7 @@ body.has-no-footer-widgets #copyright-nav { border-top: 1px solid #eee; }
 
 #title-bar { /*border-bottom: 1px solid #eee;*/ }
 #title-bar-wrap .breadcrumbs { /*border-bottom: 1px solid #eee; */}
-#main-slider-wrap { border-bottom: 1px solid #eee; }
+#main-slider-wrap { /*border-bottom: 1px solid #eee;*/ }
 
 body.page #ts-page-featured-media-wrap .featured-media-wrap,
 body.single-post #ts-post-featured-media-wrap .featured-media-wrap { border-bottom: 1px solid #eee; }
@@ -1213,7 +1214,7 @@ body.not-wall-to-wall #wrap,
 #main.has-sidebar-content-left #ts-post-wrap,
 #main.has-sidebar-comments-left #ts-comments-wrap,
 #main.has-sidebar-content-right #ts-post-wrap,
-#main.has-sidebar-comments-right #ts-comments-wrap { width: 67.30769%; }
+#main.has-sidebar-comments-right #ts-comments-wrap { width:70%; /*width: 67.30769%;*/ }
 #main .post,
 #main .mimic-post { word-wrap: break-word; }
 
@@ -1595,9 +1596,8 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
 #main-slider-wrap { 
     position: relative; 
     top: -1px !important; 
-    margin-bottom: -1px; 
-    padding-bottom: 30px; 
-    margin-bottom: 30px; 
+    margin-bottom: -1px;  
+    margin-bottom: 20px; 
 }
 #main-slider-wrap.full { 
     padding-bottom: 0; 
@@ -1796,6 +1796,7 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
     - 12e. single post featured media
     - 12f. thumb gallery
     - 12g. single page/post common
+    - 12h. main menu category - custom
 === */
 
 /* 12a. single post formatting */
@@ -1958,7 +1959,7 @@ body.single-post .has-no-sidebar .post-single-prev-next { margin-bottom: 0px; }
 }
 
 /* 12g. single page/post common */
-#main .single-entry #ts-post-wrap .post { padding: 0 0 20px 0; }
+#main .single-entry #ts-post-wrap .post { padding: 0 0 40px 0; }
 #main .single-entry .ts-about-author { padding: 20px 0 20px 98px; position: relative; }
 #main .single-entry .ts-about-author .avatar-img { position: absolute; top: 20px; left: 0px; width: 80px; padding-top: 3px; }
 #main .single-entry .ts-about-author .avatar-img a { display: block; }
@@ -2013,6 +2014,37 @@ body.single-post .has-no-sidebar .post-single-prev-next { margin-bottom: 0px; }
 #main .simple-tabs .tab-header { padding-bottom: 10px !important; }
 .widget_black-studio-tinymce .text-widget {}
 
+/* 12h. main menu category - custom*/
+/* mobile */
+.main-menu-category{}
+#main .main-menu-category img{
+    width:100%;
+    margin:2% 0;
+}
+
+@media(min-width:600px){ /* desktop */
+    body{background-color: blue;}
+    #main .main-menu-category{
+        width:1120px;
+    }
+    #main .main-menu-category img{
+        width:50%;
+        margin:0 20px 20px 0;
+        max-width:540px;
+        vertical-align: top;
+    }
+}
+
+@media all and (min-width:600px) and (max-width:1119px) {
+    body{background-color: red;}
+    #main .main-menu-category{
+        width:100%;
+    }
+    #main .main-menu-category img{
+        width:48%;
+        margin:1%;
+    }
+}
 
 /* ==================================================
     13. The Loop (Blog Loop / Blog Shortcode / etc)
@@ -2208,9 +2240,12 @@ a.featured-photo-link img { z-index:10; }
 #sidebar p { margin-bottom: 0 !important; }
 #sidebar.sidebar-left,
 #sidebar.sidebar-content-left,
-#sidebar.sidebar-comments-left { margin-right: 2.88461%; margin-left: 0px; float: left; }
-#sidebar { width: 29.80769%; margin-left: 2.88461%; float: right; }
-
+/*#sidebar.sidebar-comments-left { margin-right: 2.88461%; margin-left: 0px; float: left; }
+#sidebar { width: 29.80769%; margin-left: 2.88461%; float: right; }*/
+#sidebar.sidebar-comments-left { margin-right: 2.73%; margin-left: 0px; float: left; }
+#sidebar { width: 27.27%; margin-left: 2.73%; float: right; }
+#sidebar .page-title{border-top:2px solid #666; border-bottom:1px dotted #666;}
+#sidebar .page-title h5{margin-top:14px; font-family: 'nanum gothic';}
 
 /* ==================================================
     15. Widgets
