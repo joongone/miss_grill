@@ -968,8 +968,8 @@ body.has-no-footer-widgets #copyright-nav { border-top: 1px solid #eee; }
     .main-nav ul ul.sub-menu { border-top-color: #eee; }
 }
 
-#title-bar { border-bottom: 1px solid #eee; }
-#title-bar-wrap .breadcrumbs { border-bottom: 1px solid #eee; }
+#title-bar { /*border-bottom: 1px solid #eee;*/ }
+#title-bar-wrap .breadcrumbs { /*border-bottom: 1px solid #eee; */}
 #main-slider-wrap { border-bottom: 1px solid #eee; }
 
 body.page #ts-page-featured-media-wrap .featured-media-wrap,
@@ -1388,20 +1388,12 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
 .main-nav > div > ul > li { 
     padding: 0 0 0 25px; 
 }
-.main-nav > ul > li:before{
-    content: "";
-    margin-right:25px;
-    border-left:1px dotted #b1b1b1;
-}
+
 .main-nav > ul > li:first-child, 
 .main-nav > div > ul > li:first-child {
     margin-left: 0px;
 }
-.main-nav > ul > li:first-child::before{
-    content: "";
-    margin-right:0;
-    border:0;
-}
+
 .main-nav li.dt-only {}
 .main-nav li.mb-only { display: none; }
 .main-nav li.menu-item > a { position: relative; }
@@ -1989,7 +1981,7 @@ body.single-post .has-no-sidebar .post-single-prev-next { margin-bottom: 0px; }
 #main .mimic-post p, 
 #main .mimic-post li,
 #main .single-entry  { line-height: 1.6em; }
-#main .single-entry img { height: auto !important; }
+#main .single-entry img { height: auto !important; width:100%;}
 #main .single-entry .loop .title-info p { margin-bottom: 0px; }
 #main .single-entry p, 
 #main .single-entry blockquote, 
@@ -4125,6 +4117,18 @@ body.woocommerce-plus-minus-buttons.woocommerce .quantity input[type="number"] {
     .footer_inner .follow{
         margin-top:0;
     }
+    .main-nav > ul > li:before{
+        content: "";
+        margin-right:25px;
+        border-left:1px dotted #b1b1b1;
+    }
+    .main-nav > ul > li:first-child::before{
+        content: "";
+        margin-right:0;
+        border:0;
+    }
+    #title-bar-wrap{position: relative;}
+    #title-bar-wrap .breadcrumbs{position: absolute; top:0; right:0;}
 }
 /* 29c. max-width 959px */
 @media only screen and (max-width: 959px) {
