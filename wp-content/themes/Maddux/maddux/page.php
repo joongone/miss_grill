@@ -54,12 +54,29 @@ endif;
                                                 the_content();
 
                                                 /* 하단 이미지 처리 */
+                                                /*
                                                 $bottomImgFields = get_field('main_middle_image');
                                                 if($bottomImgFields){
                                                     echo '<div>';
                                                     echo "<img src='".$bottomImgFields['sizes']['large']."'/>";
                                                     echo '<div>';                                                    
                                                 }
+                                                */
+
+                                                /* Bottom Image */
+                                                $bottom_image_files = get_bottom_image_fullsize_file_lists($page_id);
+                                                if(count($bottom_image_files)>0){
+                                                    echo "<div>";
+                                                    for($i=0; $i<count($bottom_image_files); $i++){
+
+                                                        if($bottom_image_files[$i] != null){
+                                                            echo '<div>';
+                                                            echo "<img src='".$bottom_image_files[$i]."'/>";
+                                                            echo '<div>';  
+                                                        }
+                                                    }  
+                                                    echo "</div>";
+                                                }                                                
                                                 
                                                 wp_link_pages('before=<div class="page-links">'.__('Pages: ', 'ThemeStockyard').'<span class="wp-link-pages">&after=</span></div>&link_before=<span>&link_after=</span>'); 
                                                 ?>
