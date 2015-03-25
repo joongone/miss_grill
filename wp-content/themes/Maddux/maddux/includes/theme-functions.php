@@ -557,7 +557,7 @@ function ts_portfolio_loop($layout = '', $atts = '')
     global $paged, $ts_query, $smof_data, $ts_show_sidebar, $wp_query;
     
     $layout = ($layout) ? preg_replace("/[^0-9a-z]*/", "", strtolower($layout)) : '2column';
-    
+
     if(in_array($layout, array('masonry', 'grid')))
         include TS_SERVER_PATH . '/includes/_loop-portfolio/loop-masonry.php';
     elseif(in_array($layout, array('cards', 'gridcards', 'cardgrid', 'masonrycards')))
@@ -1033,6 +1033,7 @@ function ts_portfolio_direction_nav($reverse = true, $previous_text = '', $next_
     return ts_post_direction_nav($reverse, $previous_text, $next_text);
 }
 
+/* SJ_이전,다음 글  */
 function ts_post_direction_nav($reverse = false, $previous_text = '', $next_text = '')
 {    
     $prev_function = ($reverse) ? 'get_next_post_link' : 'get_previous_post_link';
@@ -1319,7 +1320,7 @@ function dimox_breadcrumbs() {
 	$text['home']     = ts_option_vs_default('breadcrumbs_home_link_text', '');
 	$text['home']     = (trim($text['home'])) ? $text['home'] : __('Home', 'ThemeStockyard'); // text for the 'Home' link
 	$text['portfolio']     = ts_option_vs_default('breadcrumbs_portfolio_link_text', ''); // text for the 'Portfolio' link
-	$text['category'] = __('Archives in "%s"', 'ThemeStockyard'); // text for a category page
+    $text['category'] = __("%s", 'ThemeStockyard'); // text for a category page
 	$text['search']   = __('Results for "%s"', 'ThemeStockyard'); // text for a search results page
 	$text['tag']      = __('Posts Tagged "%s"', 'ThemeStockyard'); // text for a tag page
 	$text['author']   = __('Articles by %s', 'ThemeStockyard'); // text for an author page
@@ -1330,7 +1331,7 @@ function dimox_breadcrumbs() {
 	$show_on_home   = 1; // 1 - show breadcrumbs on the homepage, 0 - don't show
 	$show_home_link = 1; // 1 - show the 'Home' link, 0 - don't show
 	$show_title     = 1; // 1 - show the title for the links, 0 - don't show
-	$delimiter      = ' <span class="delimiter">/</span> '; // delimiter between crumbs
+	$delimiter      = ' <span class="delimiter">></span> '; // delimiter between crumbs
 	$before         = '<span class="current">'; // tag before the current crumb
 	$after          = '</span>'; // tag after the current crumb
 	/* === END OF OPTIONS === */

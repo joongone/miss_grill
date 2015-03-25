@@ -41,7 +41,8 @@ $atts = (isset($atts)) ? $atts : array();
                                 endif;
                                 ?>   
                                 <div class="title-date clearfix">
-                                    <div class="title-info">                                    
+                                    <div class="title-info">   
+                                    <!-- SJ_ -->                                 
                                         <h<?php echo absint($title_size->h).' '.$title_size->style;?> class="title-h <?php echo esc_attr($text_align);?>"><?php echo ts_sticky_badge();?><a href="<?php the_permalink();?>"><?php the_title();?></a></h<?php echo absint($title_size->h);?>>
                                         <?php 
                                         if($ts_show->meta) :

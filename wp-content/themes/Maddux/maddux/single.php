@@ -107,6 +107,23 @@ get_template_part('title-bar');
                                             </div>
                                         </div>
                                     </div>
+
+                                    <!-- Relate Posts -->
+                                    <?php 
+                                    $show_related_option = (ts_option_vs_default('show_related_blog_posts', 1) == 1) ? 'yes' : 'no';
+                                    $show_related = ts_postmeta_vs_default($post->ID, '_p_related_posts', $show_related_option);
+                                    if($show_related == '1' || $show_related == 'yes') : 
+                                        $ts_related_portfolio_posts_title_text = ts_option_vs_default('related_blog_posts_title_text', 'Related Posts');
+                                        $ts_related_portfolio_posts_title_align = ts_option_vs_default('related_blog_posts_title_alignment', 'left');
+                                    ?>
+                                    <div class="ts-related-posts-on-single">
+                                        <h5 class="smaller uppercase <?php echo esc_attr('text-'.$ts_related_portfolio_posts_title_align);?>"><?php echo $ts_related_portfolio_posts_title_text;?></h4>
+                                        <?php 
+                                        $args = array('include'=>'related','limit'=>3,'show_pagination'=>'no','media_width'=>480,'media_height'=>270, 'title_size'=>4);
+                                        echo ts_blog('3columns', $args);
+                                        ?>
+                                    </div>
+                                    <?php endif;?>                                    
                                     
                                     <?php
                                     if($ts_direction_links == 'yes') ts_post_direction_nav();
@@ -130,22 +147,6 @@ get_template_part('title-bar');
                                     -->
                                     <?//php endif; ?>
                                     
-                                    <!-- Relate Posts -->
-                                    <?php 
-                                    $show_related_option = (ts_option_vs_default('show_related_blog_posts', 1) == 1) ? 'yes' : 'no';
-                                    $show_related = ts_postmeta_vs_default($post->ID, '_p_related_posts', $show_related_option);
-                                    if($show_related == '1' || $show_related == 'yes') : 
-                                        $ts_related_portfolio_posts_title_text = ts_option_vs_default('related_blog_posts_title_text', 'Related Posts');
-                                        $ts_related_portfolio_posts_title_align = ts_option_vs_default('related_blog_posts_title_alignment', 'left');
-                                    ?>
-                                    <div class="ts-related-posts-on-single">
-                                        <h5 class="smaller uppercase <?php echo esc_attr('text-'.$ts_related_portfolio_posts_title_align);?>"><?php echo $ts_related_portfolio_posts_title_text;?></h4>
-                                        <?php 
-                                        $args = array('include'=>'related','limit'=>3,'show_pagination'=>'no','media_width'=>480,'media_height'=>270, 'title_size'=>4);
-                                        echo ts_blog('3columns', $args);
-                                        ?>
-                                    </div>
-                                    <?php endif;?>
                                     
                                     <!-- Comment -->
                                     <!--
