@@ -316,8 +316,8 @@ if(in_array($ts_slider_type, array('carousel','flex')) && $ts_slider_source) :
                         $_output .= (trim($descr)) ? '<p class="portfolio-descr descr text-'.esc_attr($slider_text_align).'">'.$descr.$readmore_inline.'</p>' : '';
                     else :
                         $_output .= '<p class="blog-meta text-'.esc_attr($slider_text_align).'">'.$meta.'</p>';
-                        $_output .= '<h'.absint($title_size).' class="blog-title title color-white">'.ts_sticky_badge().$title.'</h'.absint($title_size).'>';
-                        $_output .= '<p class="blog-descr descr" style="display:none">'.$descr.'</p>';
+                        $_output .= '<h'.absint($title_size).' class="blog-title title text-'.esc_attr($slider_text_align).' color-white">'.ts_sticky_badge().$title.'</h'.absint($title_size).'>';
+                        $_output .= '<p class="blog-descr descr text-'.esc_attr($slider_text_align).'" style="display:none">'.$descr.'</p>';
                         $_output .= '<p class="blog-author-comments text-'.esc_attr($slider_text_align).'">'.$readmore_block.'</p>';
                     endif;
                     
