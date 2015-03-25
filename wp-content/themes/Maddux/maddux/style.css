@@ -1815,7 +1815,7 @@ body.has-retina-logo .main-logo img.low-res-logo { display: inline; }
 #main-container { position: relative; }
 body.single-post #main-container { padding-top: 0px; }
 body.single-post #sidebar {}
-body.page #ts-page-featured-media-wrap { margin-bottom: 30px; }
+body.page #ts-page-featured-media-wrap { margin-bottom: 20px; }
 body.page #ts-page-featured-media-wrap .featured-media-wrap,
 body.single-post #ts-post-featured-media-wrap .featured-media-wrap { /*padding: 7px 0;*/ }
 body.single-post #main.has-sidebar-right #ts-post-featured-media-wrap .featured-media-wrap { /*padding-right: 7px;*/ }
@@ -1850,16 +1850,17 @@ body.single-post #main .single-entry .post-single-prev-next { }
 body.single-post .has-no-sidebar .post-single-prev-next { margin-bottom: 0px; }
 .post-single-prev-next { padding:20px 0;}
 .post-single-prev { width:48%;float:left;text-align:left; }
-.post-single-prev strong { display: block; }
+.post-single-prev strong { /*display: block;*/ }
 .post-single-prev i { font-size: 11px; margin-right: 10px; }
 .post-single-next { width:48%;float:right;text-align:right; }
-.post-single-next strong { display: block; }
+.post-single-next strong { float:right;}
 .post-single-next i { font-size: 11px; margin-left: 10px; }
 .post-single-prev-next a:hover,
 .post-single-prev-next a:focus { text-decoration: none; }
 .post-single-prev-next a:hover span { text-decoration: underline; }
 .post-single-prev-next a span,
-.post-single-prev-next a strong { display: block; }
+.post-single-prev-next a strong { /*display: block; */}
+.post-single-prev-next a span{margin:20px; font-size:15px; color:#1e1e1e; font-weight: 500;}
 .single-portfolio-fullwidth .post-single-prev-next a span { display: none; }
 .wp-caption {
     margin: 10px 0;
@@ -1962,7 +1963,7 @@ body.single-post .has-no-sidebar .post-single-prev-next { margin-bottom: 0px; }
 }
 
 /* 12g. single page/post common */
-#main .single-entry #ts-post-wrap .post { padding: 0 0 40px 0; }
+#main .single-entry #ts-post-wrap .post { padding: 0 0 100px 0; }
 #main .single-entry .ts-about-author { padding: 20px 0 20px 98px; position: relative; }
 #main .single-entry .ts-about-author .avatar-img { position: absolute; top: 20px; left: 0px; width: 80px; padding-top: 3px; }
 #main .single-entry .ts-about-author .avatar-img a { display: block; }
@@ -1972,7 +1973,7 @@ body.single-post .has-no-sidebar .post-single-prev-next { margin-bottom: 0px; }
 #main .single-entry .ts-about-author .content h4 { margin-bottom: 10px; }
 .ts-related-posts-on-single { padding: 20px 0; }
 .single-portfolio .ts-related-posts-on-single { border: none; }
-.ts-related-posts-on-single .entry { padding-bottom: 0px !important; padding-top: 10px !important; }
+.ts-related-posts-on-single .entry { padding-bottom: 0px !important; padding-top: 20px !important; }
 .ts-related-posts-on-single .entry .title-h { margin-bottom: 0px !important; }
 .ts-related-posts-on-single .entry .title-info {  }
 .ts-related-posts-on-single .entry .entry-info { display: none; }
@@ -1991,7 +1992,7 @@ body.single-post .has-no-sidebar .post-single-prev-next { margin-bottom: 0px; }
 #main .single-entry blockquote, 
 #main .single-entry ul, 
 #main .single-entry ol { margin-top: 0px !important; margin-bottom: 1em; }
-#main .single-entry .ts-shortcode-block { margin-bottom: 1em; }
+#main .single-entry .ts-shortcode-block { /*margin-bottom: 1em; */}
 #ts-post-featured-media-wrap .ts-shortcode-block,
 #ts-post-featured-media-wrap .video-shortcode { margin-bottom: 0 !important; }
 #ts-post-featured-media-wrap .wp-video { width: 100% !important; }
@@ -4164,7 +4165,7 @@ body.woocommerce-plus-minus-buttons.woocommerce .quantity input[type="number"] {
         border:0;
     }
     #title-bar-wrap{position: relative;}
-    #title-bar-wrap .breadcrumbs{position: absolute; bottom:6px; right:0;}
+    #title-bar-wrap .breadcrumbs{position: absolute; top:0px; right:0;}
 }
 /* 29c. max-width 959px */
 @media only screen and (max-width: 959px) {
@@ -4652,21 +4653,173 @@ html[xmlns] .slides {display: block;}
 /* 서브페이지 custom */
 #sidebar .page-title,
 .blog-entries .title-info,
-.ts-related-posts-on-single h5{height:3.1875rem; border-top:2px solid #666; border-bottom:1px dotted #666;}
+.ts-related-posts-on-single h5{margin:0; height:3.1875rem; border-top:2px solid #666; border-bottom:1px dotted #666;}
+
 #sidebar .page-title h5{margin-top:14px; font-family: 'nanum gothic';}
+
 .blog-entries .title-info .title-h a{font-size: 15px; color:#1e1e1e; font-weight: 500;}
-.blog-entries .title-info .title-h a .add-text{font-size:12px; color:#8a8a8a;}
+
+#title-bar-text h1{font-size: 15px; color:#1e1e1e; line-height:3.1875rem;}
+.blog-entries .title-info .title-h a .add-text,
+#title-bar-text .add-text{font-size:12px; color:#8a8a8a;}
 #main .entry-content .post p{font-size:13px; color:#666; line-height:1.8em;}
 
 .entry .entry-content{position:relative; padding-top:71px;}
-.loop .entry .featured-media-wrap{}
 .loop .entry .title-date{position:absolute; top:0; left:0; width:100%;}
 
+
+
+/*빵부스러기*/
 .breadcrumbs span:first-child a{color:#333; text-transform: uppercase; font-weight: 500;}
 
 /*related posts*/
+.ts-related-posts-on-single{border-bottom: 1px dotted #666;}
 .ts-related-posts-on-single h5.smaller{line-height: 3.1875rem; font-size:15px !important; color:#1e1e1e; font-weight: 500;}
 .ts-related-posts-on-single .entry .entry-content{position:relative; padding-top:0;}
 .ts-related-posts-on-single .loop .entry .title-date{position:static;}
 .ts-related-posts-on-single .title-info{border:none; height: auto; margin-top: 16px;}
 .ts-related-posts-on-single .title-info .title-h a{ font-size: 12px; color:#666; font-weight: normal;}
+
+/*포트스 상세에서 글쓴이 안보이기*/
+#ts-post-author{display: none;}
+#title-bar h1 a{font-weight: 500;}
+.single-post #title-bar #title-bar-text{width: 100%; }
+
+@media(min-width:719px){ /* desktop */
+    .single-post #title-bar #title-bar-text{width: 67.0008%; }
+}
+
+.single-post{}
+.single-post #title-bar-text{margin:0; height:3.1875rem; border-top:2px solid #666; border-bottom:1px dotted #666;}
+
+/*웅진플레이도시점*/
+.page #title-bar-text{height:3.1875rem; border-top:2px solid #666; border-bottom:1px dotted #666;}
+.page #title-bar-text h1{ font-family: 'nanum gothic';}
+
+.page #title-bar{position: relative; margin-top:20px; padding-top:36px;}
+@media (min-width: 960px){
+    .page #title-bar {
+        margin-top:70px;
+        padding: 36px 0 20px;
+    }
+}
+
+.page #title-bar .title-bar-caption{position:absolute; top:0; left:0;}
+
+/*웅진플레이도시점 store info IR*/
+.page-id-10 .title-bar-caption{
+    width: 167px;
+    height: 16px;
+    background: url(images/cate_store_info.gif) no-repeat 0 0;
+    text-indent: -9999px;
+}
+@media only screen and (min-width: 960px){
+    .page #title-bar-wrap .breadcrumbs {
+      position: absolute;
+      top: -8px;
+      right: 0;
+    }
+}
+
+/*table style*/
+.table_default{
+    width:100%;
+    border-top:1px solid #666;
+    border-collapse: collapse;
+    border-spacing: 0;
+
+}
+.table_default th,
+.table_default td{
+    padding:9px 0;
+    border-bottom:1px dotted #5f5f5f;
+    border-left:1px dotted #5f5f5f;
+    text-align: center;
+}
+.table_default tr th:first-child,
+.table_default tr td:first-child{
+    border-left:0;
+}
+.table_default th{
+    font-weight: 500;
+    background-color: #eee;
+}
+
+/*map style*/
+.map_wrap{
+    margin-top:70px;
+    border:1px solid #d1d1d1;
+    border-top:2px solid #666;
+}
+
+/*시설안내 리스트*/
+#main .single-entry ul.place_point{
+    margin-top:20px !important;
+}
+.post ul.place_point{
+    margin:0;
+}
+.place_point{
+    overflow:hidden;
+}
+.place_point li{
+    float:left;
+    width:30%;
+    margin-bottom:20px;
+    list-style:none;
+}
+@media only screen and (min-width: 960px){
+    .place_point li{
+        float:left;
+        width:auto;
+        margin-left:33px;
+        
+        padding-left: 0;
+        list-style:none;
+    }
+}
+.place_point li:first-child{
+    margin-left:0;
+}
+.point_icon{
+    color:#666;
+    font-size: 13px;
+}
+.point_icon > span{
+    width:25px;
+    height:25px;
+    display: inline-block;
+    margin-right: 10px;
+    background-repeat: none;
+    background-image: url(images/sp_icon_point.gif);
+    vertical-align: middle;
+}
+.point_icon .reserve{
+    background-position: 0 0;
+}
+.point_icon .group{
+    background-position: 0 -25px;
+}
+.point_icon .no_smoke{
+    background-position: 0 -50px;
+}
+.point_icon .parking{
+    background-position: 0 -75px;
+}
+.point_icon .wifi{
+    background-position: 0 -100px;
+}
+.point_icon .child{
+    background-position: 0 -125px;
+}
+.point_icon .toilet{
+    background-position: 0 -150px;
+}
+.point_icon .credit{
+    background-position: 0 -175px;
+}
+.point_icon .receipt{
+    background-position: 0 -200px;
+}
+
+#main .single-entry p.mb100{margin-bottom:100px;}
