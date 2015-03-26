@@ -4120,6 +4120,7 @@ body.woocommerce-plus-minus-buttons.woocommerce .quantity input[type="number"] {
     #footer-wrap,
     #copyright-nav-wrap,
     #title-bar-wrap { padding-left: 20px; padding-right: 20px; }
+    #title-bar-wrap .breadcrumbs{padding-right: 20px;}
 }
 /* 29b. min-width 960px desktop sujin*/
 @media only screen and (min-width: 960px) { 
