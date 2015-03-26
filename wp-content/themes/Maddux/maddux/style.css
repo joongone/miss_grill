@@ -1989,7 +1989,7 @@ body.single-post .has-no-sidebar .post-single-prev-next { margin-bottom: 0px; }
 #main .mimic-post p, 
 #main .mimic-post li,
 #main .single-entry  { line-height: 1.6em; }
-#main .single-entry img { height: auto !important; width:100%;}
+#main .single-entry img { height: auto !important;}
 #main .single-entry .loop .title-info p { margin-bottom: 0px; }
 #main .single-entry p, 
 #main .single-entry blockquote, 
@@ -4718,16 +4718,16 @@ html[xmlns] .slides {display: block;}
 .single-post #title-bar .title-bar-caption{position:absolute; top:0; left:0;}
 
 /*웅진플레이도시점 store info IR*/
-.page-id-10 .title-bar-caption{
+.page-id-10 .title-bar-caption,
+.page-id-12 .title-bar-caption,
+.page-id-14 .title-bar-caption{
     width: 167px;
     height: 16px;
     background: url(images/cate_store_info.gif) no-repeat 0 0;
     text-indent: -9999px;
 }
 /*브랜드 소개 about missgrill IR*/
-.page-id-8 .title-bar-caption,
-.page-id-12 .title-bar-caption,
-.page-id-14 .title-bar-caption{
+.page-id-8 .title-bar-caption{
     width: 242px;
     height: 16px;
     background: url(images/cate_about_missgrill.gif) no-repeat 0 0;
@@ -4744,7 +4744,7 @@ html[xmlns] .slides {display: block;}
     width: 171px;
     height: 16px;
     margin-bottom: 20px;
-    background: url(images/cate_news.gif) no-repeat 0 0;
+    background: url(images/cate_notice.gif) no-repeat 0 0;
     text-indent: -9999px;
 }
 
@@ -4851,3 +4851,31 @@ table.table_default{
 }
 
 #main .single-entry p.mb100{margin-bottom:100px;}
+
+/*브랜드소개*/
+.brand_intro{
+    margin-top:30px;
+    text-align: center;
+}
+.brand_intro p{
+    color:#787878;
+    font-size: 16px;
+}
+@media only screen and (min-width: 960px){
+    .brand_intro p{
+        padding:10px 0;
+    }
+}
+.brand_intro strong{
+    font-weight: 500;
+}
+.brand_intro .title{
+    color:#4d7620;
+}
+.brand_intro .end{
+    color:#171717;
+    font-size: 20px;
+}
+.brand_intro .red{
+    color:#ee3124;
+}
