@@ -1042,8 +1042,8 @@ function ts_post_direction_nav($reverse = false, $previous_text = '', $next_text
     $previous_text = (trim($previous_text)) ? $previous_text : __('Older', 'ThemeStockyard');
     $next_text = (trim($next_text)) ? $next_text : __('Newer', 'ThemeStockyard');
     
-    $previous_link = $prev_function('%link', '<strong><i class="fa fa-angle-left"></i></strong><span>%title</span>');
-    $next_link = $next_function('%link','<span>%title</span><strong><i class="fa fa-angle-right"></i></strong>');
+    $previous_link = $prev_function('%link', '<strong><i class="fa fa-angle-left"></i></strong><span class="short">'.$previous_text.'</span><span class="title">%title</span>');
+    $next_link = $next_function('%link','<span class="title">%title</span><span class="short">'.$next_text.'</span><strong><i class="fa fa-angle-right"></i></strong>');
     // $previous_link = $prev_function('%link', '<strong><i class="fa fa-chevron-left"></i>'.$previous_text.'</strong><span>%title</span>');
     // $next_link = $next_function('%link','<strong>'.$next_text.'<i class="fa fa-chevron-right"></i></strong><span>%title</span>');
     
