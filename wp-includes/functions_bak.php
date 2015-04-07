@@ -4809,34 +4809,3 @@ function wp_validate_boolean( $var ) {
 
 	return (bool) $var;
 }
-
-function fb_share() {
-if (is_single()/* 1 */) {
-	
-	global $post;
-
-	if(get_the_post_thumbnail($post->ID, 'thumbnail')) {
-		$image = wp_get_attachment_url( get_post_thumbnail_id($postID) );
-	} else {	
-		$image = ''; /* 2 */
-	}
-
-	$description = get_bloginfo('description');
-	$description = hwangc_excerpt( $post->post_content, $post->post_excerpt );
-	$description = strip_tags($description);
-	$description = str_replace("\"", "'", $description);
-?>
-	<meta property="og:title" content="<?php the_title(); ?>" />
-	<meta property="og:type" content="article" />
-	<meta property="og:image" content="<?php echo $image; ?>" />
-	<meta property="og:url" content="<?php the_permalink(); ?>" />
-	<meta property="og:description" content="<?php echo $description ?>" />
-	<meta property="og:site_name" content="<?php echo get_bloginfo('name'); ?>" />
-<?php 	}
-}
-
-function hwangc_excerpt($text, $excerpt){
-	$raw_excerpt = $text;
-	if ($excerpt) return $excerpt;
-	return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
-}
